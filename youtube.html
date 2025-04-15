@@ -31,12 +31,16 @@
 
     <nav>
         <ul>
-            <li id="doplay">再生</li>
-            <li id="dostop">停止</li>
-            <li id="dopause">一時停止</li>
+            <div class="flex">
+                <li id="doplay">▶️ 再生</li>
+                <li id="dostop">⏸️ 停止</li>
+                <li id="dopause">🛑 一時停止</li>
+            </div>
             <li id="mute">ミュート</li>
-            <li id="do10sNext">10秒先へ</li>
-            <li id="do10sPrev">10秒戻る</li>
+            <div class="flex">
+                <li id="do10sPrev">◀︎10秒戻る</li>
+                <li id="do10sNext">10秒先へ▶︎</li>
+            </div>
             <li>
                 <select id="MovieId" class="ytMovie" name="ytMovie">
                     <option selected>選択してください。</option>
@@ -114,7 +118,7 @@
             document.querySelector('#volumeNum').textContent = currentVol; //⑤テキストにも音量を数値で表示
         }
 
-        // 5. The API calls this function when the player's state changes.
+        // 5. The API calls this function when the player's state changes...
         //    The function indicates that when playing a video (state=1),
         //    the player should play for six seconds and then stop.
         /* 5. video playerのステート（状態）が変更されたら、この関数を呼び出す。
